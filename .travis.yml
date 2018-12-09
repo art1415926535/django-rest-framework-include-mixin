@@ -14,8 +14,6 @@ matrix:
       env: TOXENV=py34-111
     - python: 3.4
       env: TOXENV=py34-20
-    - python: 3.4
-      env: TOXENV=py34-21
     - python: 3.5
       env: TOXENV=py35-110
     - python: 3.5
@@ -43,3 +41,4 @@ deploy:
   password:
     secure: WCjFV7bUhySrshVlGkgi/AgGNpMakg7TrK118kqDdbLcergU6p2nusytIWMxTNZzQ2gU49I5hn+Aisnr/2mTFY+rnNuvPCw/H6p92sminKSzE8cflmAJTXsesFW0Fpyv8A1M1fbgSbnt0oRpyWbBx+lNdddp+8CFavuAzb0rtmhfdQmOFPFYSgSfCst05KjQdJp/g/tWV6MNeoAvmPnUTA54nk3fQZ5xehQFcY3S9qPUkmoDS7pskdsWvbC0T8IAK2RDTfRDpiEjQAw2iuj6OqpteKzAXYS1GCiWdZPjty3vLpBCrQ8P0LL2xYhUAs/BeHGd4lfj07dWDzexI8/d1j2KiC7qJSjFVoqezynqSkfYEfdTP+wHOghBzvA7BmV8jHhSW5Ll9tt3wBNwfngvynT9+4iLRxGLc2rnRcCxTbtDQeNMbduKiJj99jQz0BAzqN9JKveRpav1x6IZh37jrCO/3GE1bxPb9n4AHTg4GrbIIGzqzeh3GUjmy0BKE0YiU+xdE38o4romXg8/c8LJR0q+0rbM47/lqulSGGxSgEPKQq0Q5QopWyZmqg+yUJc1Np4bU3vg1uCkWTToqv0acg3HjwQgDUm45ezR/eEHcJdu81BI7NJ88E/GedCAeEj3qGozcNzrUmOeAjnbelZ+rZTGG5DvOWaa5b1TRA/pFfM=
   distributions: sdist bdist_wheel
+  skip_existing: true
