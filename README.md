@@ -1,5 +1,14 @@
 # Django REST framework light includable serializer fields
 
+[![Build Status](https://travis-ci.com/art1415926535/django-rest-framework-include-mixin.svg?branch=master)](https://travis-ci.com/art1415926535/django-rest-framework-include-mixin)
+[![codecov](https://codecov.io/gh/art1415926535/django-rest-framework-include-mixin/branch/master/graph/badge.svg)](https://codecov.io/gh/art1415926535/django-rest-framework-include-mixin)
+
+
+[![Version](https://img.shields.io/pypi/v/djangorestframework-include-mixin.svg)](https://pypi.org/project/djangorestframework-include-mixin/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/djangorestframework-include-mixin.svg)](https://pypi.org/project/djangorestframework-include-mixin/)
+[![Django Versions](https://img.shields.io/pypi/djversions/djangorestframework-include-mixin.svg)](https://pypi.org/project/djangorestframework-include-mixin/)
+
+
 ## Requirements
 * Python (2.7, 3.4, 3.5, 3.6)
 * [Django REST Framework](https://github.com/encode/django-rest-framework) (>=3.0)
