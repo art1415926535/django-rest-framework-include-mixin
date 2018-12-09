@@ -2,7 +2,7 @@
 from rest_framework.exceptions import ValidationError
 
 
-class IncludeMixin:
+class IncludeMixin(object):
     @staticmethod
     def include_fields(request):
         if request is None:
@@ -14,7 +14,7 @@ class SerializerIncludeMixin(IncludeMixin):
     @property
     def fields(self):
         """Add requested extra fields."""
-        fields = super().fields
+        fields = super(SerializerIncludeMixin, self).fields
 
         is_view_serializer = (
             self.root == self
@@ -60,7 +60,7 @@ class SerializerIncludeMixin(IncludeMixin):
 class QueryOptimizerMixin(IncludeMixin):
     def get_queryset(self):
         """Optimized DB query."""
-        queryset = super().get_queryset()
+        queryset = super(QueryOptimizerMixin, self).get_queryset()
         include = self.include_fields(self.request)
 
         try:

@@ -17,7 +17,7 @@ class TestViews(TransactionTestCase):
     @classmethod
     def setUp(cls):
         cls.client = APIClient()
-        super().setUpClass()
+        super(TestViews, cls).setUpClass()
 
         cls.number = 3
         mommy.make(UserProfile, _quantity=cls.number)
