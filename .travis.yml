@@ -1,0 +1,51 @@
+language: python
+
+sudo: false
+
+matrix:
+  include:
+    - python: 2.7
+      env: TOXENV=py27-19
+    - python: 2.7
+      env: TOXENV=py27-110
+    - python: 2.7
+      env: TOXENV=py27-111
+    - python: 3.4
+      env: TOXENV=py34-19
+    - python: 3.4
+      env: TOXENV=py34-110
+    - python: 3.4
+      env: TOXENV=py34-111
+    - python: 3.4
+      env: TOXENV=py34-20
+    - python: 3.4
+      env: TOXENV=py34-21
+    - python: 3.5
+      env: TOXENV=py35-19
+    - python: 3.5
+      env: TOXENV=py35-110
+    - python: 3.5
+      env: TOXENV=py35-111
+    - python: 3.5
+      env: TOXENV=py35-20
+    - python: 3.5
+      env: TOXENV=py35-21
+    - python: 3.6
+      env: TOXENV=py36-111
+    - python: 3.6
+      env: TOXENV=py36-20
+    - python: 3.6
+      env: TOXENV=py36-21
+
+install:
+  - pip install tox
+
+script:
+  - tox -e $TOXENV
+
+deploy:
+  provider: pypi
+  user: Art1415926535
+  distributions: sdist bdist_wheel
+  password:
+    secure: l1leAhW9oaDcZUTxNf+6DDHhmRfM/hIyLyK85OgiPhNLtwE0dlfAh9lgFp7Z5WgxYAEOYCVOhADOLAgi8opt4WTeVmdJac5dUb8hodod7fVtvWmp2HbisGzVB/h6eyXCW5jflasssiQ+0L/SSVoqvUMqD+T5PwhjAt4caFwoc14J4nA6D2VIErpU7YIIs9GDHOe8vqOECdiEC1AomPbxajj8zLKyBpz2C0GMLm0xzsw0M3zhuF6XbKYZF7EbWBdetOS4eaQ9VpPmEF7UWDb0hRqPq9Dj4nuq7/Vz66O13eFzt2cyGREZUB+Hr5gsD60lj24VDhyfMcFXk9ZGeXLAM5wD3zaulPzhion+f/4caSdTf+qml09cjWESIS5ShjgFg83878rKSQuxGbucghNDXs/Qf1fIIlonPzjRPfZnTWnhmhFSb1zh6Hmulrcr5m96MsvIJ/GLsJ1SPm+DJDTjoIx5HO+vv2/nO6qtEMF7kZHIEEucl7dnZ3ey/k6kTIKj6eMrsudRajmXXuQXSXdPa6uBqRpUR6f9FSFKUpx1rDkpk6n4q/RTtCjhojlL9Jiy6ZtHAlaa3QbY/uRjkCh328y58gAF4WrtBFbliD4Cs3A+hEvIvVjIjEJuUl+J3PnA9Xpq/uUZdLBFroajfVrJem7bsNniPAVNojG9S8lzSaE=
